@@ -1,0 +1,1864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCorp Solutions - Empresa Líder en Tecnología</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header y Navegación */
+        .header {
+            background: linear-gradient(90deg, #667eea 0%, #6dd5ed 50%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem 0 0.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-tabs {
+            display: flex;
+            flex-wrap: nowrap;
+            list-style: none;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50px;
+            padding: 0.5rem;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 0.2rem 1.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            text-align: center;
+            white-space: pre-line;
+        }
+
+        .nav-tab:hover {
+            background: linear-gradient(90deg, #2196f3 0%, #0d47a1 100%); /* azul claro a azul oscuro */
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+        }
+
+        .nav-tab.active {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Contenedor principal */
+        .main-container {
+            margin-top: 140px;
+            min-height: calc(100vh - 140px);
+        }
+
+        /* Secciones */
+        .section {
+            display: none;
+            padding: 3rem 0;
+            min-height: calc(100vh - 80px);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 rem;
+        }
+
+        /* Sección Oferta Academica */ 
+.inicio {
+    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 1200px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #667eea;
+    display: block;
+}
+
+.stat-label {
+    color: #7f8c8d;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* ============================= */
+/* Sección Texto Informativo     */
+/* ============================= */
+.about-text {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 25px 30px;
+    background: #fdfdfd;
+    border-left: 6px solid #1a3d7c;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+/* Títulos de cada sección */
+.about-text p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a3d7c;
+    margin-bottom: 18px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #1a3d7c;
+    letter-spacing: 0.5px;
+}
+
+/* Texto de párrafos */
+.about-text p {
+    margin-bottom: 14px;
+    font-size: 16px;
+    text-align: justify;
+    color: #444;
+}
+
+/* Viñetas automáticas */
+.about-text p::before {
+    content: "▸ ";
+    color: #1a3d7c;
+    font-weight: bold;
+}
+
+/* Quitar viñeta a los títulos */
+.about-text p:first-child::before {
+    content: "";
+}
+		
+
+        /* Sección ¿Quienes Somos? */
+        .nosotros {
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            height: 400px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+		
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 5px solid #667eea;
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+		
+		/* Estilo para imágenes */
+           .styled-image {
+            display: block;                
+            max-width: 100%;             
+            height: auto;                
+            margin: 20px auto;           
+            border-radius: 12px;          
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15); 
+            border: 3px solid #f5f7fb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+	    }
+		   /* Efecto hover */
+         .styled-image:hover {
+          transform: scale(1.03); /* zoom suave */
+          box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+		 }
+		
+        /* Sección Horarios */
+        .servicios {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .servicios .section-title,
+        .servicios .section-subtitle {
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-features li {
+            padding: 0.3rem 0;
+            opacity: 0.8;
+        }
+
+        .service-features li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Sección Vestuario Institucional */
+        /* 🔹 Sección general con fondo blanco (igual que .equipo) */
+.tarjetas-section {
+  background: white;
+  padding: 60px 0;
+}
+
+/* 🔹 Contenedor de las tarjetas */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🔹 Tarjeta base */
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* 🔸 Línea decorativa superior */
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* 🔸 Efecto hover */
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔸 Tarjeta expandida */
+.tarjeta.expanded {
+  grid-column: span 2;
+  background: white;
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* 🔹 Título */
+.tarjeta h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* 🔹 Texto */
+.tarjeta p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* 🔹 Texto visible al expandir */
+.tarjeta.expanded p {
+  max-height: 250px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* 🔸 Indicador “Ver más” / “Cerrar” */
+.tarjeta::after {
+  content: "Ver más";
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tarjeta:hover::after {
+  transform: scale(1.1);
+}
+
+.tarjeta.expanded:after {
+  content: "Cerrar";
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 600px) {
+  .tarjeta.expanded {
+    grid-column: span 1;
+  }
+}
+/* Sección Eventos y actividades */
+        .Eventos y actividades {
+            background: #f8f9fa;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .news-content {
+            padding: 2rem;
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .news-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .news-category {
+            background: #667eea;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #764ba2;
+        }
+		
+  /* ===== Sección Pastoral Vocacional ===== */
+
+.contenedor {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    color: #0d47a1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* ---- Contenedor de tarjetas ---- */
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* ---- Tarjeta individual ---- */
+.tarjeta {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta h3 {
+    font-size: 1.5rem;
+    color: #1565c0;
+    margin-bottom: 1rem;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* ---- Adaptación a pantallas pequeñas ---- */
+@media (max-width: 768px) {
+    .tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        max-width: 90%;
+    }
+}
+        
+
+	
+		      /* contacto */
+              .contacto {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+        }
+
+        .contacto .section-title,
+        .contacto .section-subtitle {
+            color: blue;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+            color: #ecf0f1;
+        }
+
+        .contact-details p {
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+
+
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-tabs {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                background: none;
+                padding: 0;
+            }
+
+            .nav-tab {
+                font-size: 0.9rem;
+                padding: 0.6rem 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+		
+		.carousel {
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  margin: 20px 0 20px auto; /* empuja hacia la derecha */
+}
+
+.slides {
+  display: flex;
+  width: 300%; /* porque hay 3 imágenes */
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  25%  { transform: translateX(0%); }
+  35%  { transform: translateX(-100%); }
+  60%  { transform: translateX(-100%); }
+  70%  { transform: translateX(-200%); }
+  95%  { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+/* Sección principal */
+.section.Oferta.Academica {
+  background: linear-gradient(to right, #f0f4ff, #e6ecfa);
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título principal */
+.hero-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Contenido del héroe */
+.hero-content {
+  text-align: center;
+}
+
+/* Grid de contenido */
+.about-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Texto descriptivo */
+.about-text {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    color: #34495e;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.Oferta Academica {
+    background: linear-gradient(135deg, rgba(102,126,234,0.1), rgba(118,75,162,0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    padding: 3rem 0;
+    animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .Oferta Academica.active {
+        display: block;
+}
+
+.nuevo-apartado .section-title {
+  color: #2c3e50;
+}
+
+.nuevo-apartado .section-subtitle {
+  color: #7f8c8d;
+}
+
+.nuevo-apartado .about-text {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  line-height: 1.8;
+}
+<!-- ===== CSS ===== -->
+
+  .ubicacion {
+    text-align: center;
+    margin: 40px auto;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
+
+  .ubicacion-titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .mapa-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+/* 🔹 Estilos de Tarjetas Expansibles (estilo similar a .team-card) */
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+.tarjeta {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Línea superior decorativa */
+.tarjeta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Efecto hover */
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Tarjeta expandida */
+.tarjeta.expanded {
+  grid-column: span 2;
+  background: white;
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+/* Título */
+.tarjeta h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Texto normal */
+.tarjeta p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Texto visible cuando se expande */
+.tarjeta.expanded p {
+  max-height: 250px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Indicador de acción ("Ver más" / "Cerrar") */
+.tarjeta::after {
+  content: "Ver más";
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 0.85rem;
+  color: #667eea;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.tarjeta:hover::after {
+  transform: scale(1.1);
+}
+
+.tarjeta.expanded::after {
+  content: "Cerrar";
+  color: #764ba2;
+}
+
+/* 🔸 Responsivo */
+@media (max-width: 600px) {
+  .tarjeta.expanded {
+    grid-column: span 1;
+  }
+}
+#screensaver.hidden { opacity:0; pointer-events:none;}
+.media {
+  width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0;
+  opacity:0; transform: scale(1.1);
+  transition: opacity 1s ease, transform 20s ease;
+  filter: blur(0px);
+}
+.media.active { opacity:1; transform: scale(1); filter: blur(0px);}
+.content { text-align:center; color:white; padding:50px; position:relative; z-index:1;
+}
+    </style>
+</head>
+<body>
+   <div id="screensaver">
+  <!-- Añade aquí tus imágenes y videos -->
+  <img src="https://picsum.photos/id/1015/1920/1080" class="media active">
+  <img src="https://picsum.photos/id/1018/1920/1080" class="media">
+  <video src="video1.mp4" class="media" muted loop autoplay playsinline></video>
+  <img src="https://picsum.photos/id/1021/1920/1080" class="media">
+  <video src="https://www.w3schools.com/html/movie.mp4" class="media" muted loop autoplay playsinline></video>
+</div>
+</main>
+
+<script>
+const medias = document.querySelectorAll("#screensaver .media");
+let index = 0;
+let inactivityTimer;
+
+// Mostrar primera media inmediatamente
+function showMedia(i){
+  medias.forEach((el,j)=> el.classList.remove("active"));
+  medias[i].classList.add("active");
+}
+
+// Cambiar media cada 10 segundos
+function nextMedia(){
+  index = (index + 1) % medias.length;
+  showMedia(index);
+}
+setInterval(nextMedia, 10000);
+showMedia(index);
+
+// Ocultar salvapantallas al detectar actividad
+function hideScreensaver(){
+  document.getElementById("screensaver").classList.add("hidden");
+  clearTimeout(inactivityTimer);
+  inactivityTimer = setTimeout(()=>{
+    document.getElementById("screensaver").classList.remove("hidden");
+  }, 60000);
+}
+
+window.addEventListener("mousemove", hideScreensaver);
+window.addEventListener("keydown", hideScreensaver);
+window.addEventListener("click", hideScreensaver);
+
+// Mostrar salvapantallas al cargar la página
+document.getElementById("screensaver").classList.remove("hidden");
+
+// Permitir activar/desactivar audio al hacer click sobre un video
+document.getElementById("screensaver").addEventListener("click", e=>{
+  if(e.target.tagName === "VIDEO"){
+    e.target.muted = !e.target.muted;
+  }
+});
+</script>
+
+   <!-- Botón flotante para Chatbot Dialogflow -->
+    |
+    </div>
+    <!-- Widget de Dialogflow Essentials -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="KioscoCEM"
+  agent-id="701fbab7-2ca5-41ce-b844-4ea70bcf10d3"
+  language-code="en"
+></df-messenger>
+    <script>
+        function toggleChatbot() {
+            var bot = document.getElementById('dialogflow-chatbot');
+            bot.style.display = (bot.style.display === 'none' || bot.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-title" style="text-align:center; padding-bottom:1.2rem;">
+            <h1 style="font-size:2.5rem; font-weight:700; margin:0; letter-spacing:1px; color:#fff; text-shadow:0 2px 8px rgba(0,0,0,0.15);">Bienvenido al Colegio Eucarístico Mercedario</h1>
+        </div>
+        <nav class="nav-container" style="margin-top:0;">
+            <!-- Título eliminado -->
+            <ul class="nav-tabs">
+                <li><a href="#" class="nav-tab" data-section="inicio">Inicio</a></li>
+                <li><a href="#" class="nav-tab" data-section="Oferta Academica">Oferta Academica</a></li>
+                <li><a href="#" class="nav-tab" data-section="nosotros">¿Quienes Somos?</a></li>
+                <li><a href="#" class="nav-tab" data-section="servicios">Horarios</a></li>
+                <li><a href="#" class="nav-tab" data-section="equipo">Vestuario</a></li>
+                <li><a href="#" class="nav-tab" data-section="noticias">Actividades</a></li>
+                <li><a href="#" class="nav-tab" data-section="Pastoral vocacional">Pastoral</a></li>
+                <li><a href="#" class="nav-tab" data-section="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="main-container">
+        <!-- Sección inicio -->
+        <!-- Sección inicio -->
+        <section id="inicio" class="section inicio active">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Eucaristicos Mercedarios</h1>
+                    <p class="hero-subtitle">
+                        100 AÑOS FORMANDO EUCARISTICOS MERCEDARIOS DE CORAZON
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">100 +</span>
+                            <span class="stat-label">Años de Presencia Eucaristica Mercedaria</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">50 +</span>
+                            <span class="stat-label">Hermanas Mercedarias del Santisimo Sacramento</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Años de Experiencia Formando Jovenes Eucariasticos Mercedarios</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">25 +</span>
+                            <span class="stat-label">Años compartiendo la Pastoral Vocacional Juvenil </span>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+     </section>
+	 
+	 
+	 <!-- Oferta Academica -->
+<section id="Oferta Academica" class="section Oferta Academica">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" style="text-align:center;">Oferta Académica</h2>
+            <p class="section-subtitle" style="text-align:center;">
+                Descubre nuestra oferta educativa y programas académicos.
+            </p>
+        </div>        
+    </div>
+
+<div class="about-text">
+            <p>
+                1.Documentacion Basica
+            </p>
+            <p>
+                Los padres de familia deberán presentar:
+                Partida de nacimiento del estudiante reciente como mínimo 3 meses
+              Copia de DUI de los padres o responsable.</p>
+                <p> Copia de Fe de bautismo.</P>
+
+               <p>Registro de notas del estudiante del primer o segundo trimestre actualizado
+              según sea el formato de la institución de procedencia y certificado del año anterior 2025
+               Constancia de buena conducta Solvencia de pago de la institución de donde procede.</p>
+
+             <p> NOTA: Para el nivel de Parvularia solamente sí ha realizado estudios
+               previos deberá presentar constancia de notas y certificado</p>
+
+         <p>La documentación solicitada debe ser enviada
+          electrónicamente (escaneado o imagen legible)
+          al menos seis días antes del examen de admisión, al correo: 
+           nuevoingreso2026@colegioeucaristicomercedario.edu.sv  
+           o al WhatsApp: 78835145 </p>
+        </div>
+  </div>
+  
+ 
+  <div class="about-text">
+  <p>
+     2. PAGO DE EXAMENES DE ADMISIÓN
+	 </p>
+	 
+	      <p> Deberá cancelar $16 dólares por los exámenes de admisión .
+          Puede depositarlo en la siguiente cuenta:</p>
+
+                <p>Asociación Mercedaria del Santísimo Sacramento,
+               N° de cuenta:  002510139053 BANCO DAVIVIENDA</p>
+ 
+      <p>Luego deberá enviar una fotografía del voucher
+        al Whatsapp del colegio: 78835145
+        </p>
+
+</div>
+
+        <div class="about-text">
+		<p> 
+          3. EXAMEN DE ADMISIÓN</p>
+           <p>
+		   Este se realizará de forma presencial una vez cancelado el derecho de examen se le enviará a su correo personal los contenidos a evaluar.
+           </p>
+		   </div>
+		   
+		   <div class="about-text">
+		   
+		   <p> 4. FECHA DE EXÁMENES DE ADMISIÓN </p>
+
+             <p> Para Educación Parvularia y Primer grado 
+              Jueves 21  de agosto
+
+          Para Educación Básica (2° a 9° grado) y Bachillerato
+          Viernes 22 de agosto
+		   </p>
+		   </div>
+		   
+		   <div class="about-text">
+		   <p>
+		   5. EXÁMENES A REALIZAR</p>
+		   <p>
+           Evaluación Cognitiva:
+           Matemática
+           Lenguaje
+           Inglés (Para tercer ciclo y bachillerato)
+		   </p> 
+		   </div>
+		   
+		   <div class="about-text">
+		   <p>
+		   
+             6. INFORME DE RESULTADOS DEL
+             EXAMEN DE ADMISIÓN</p>
+			 
+			 <p> Se le notificaran los resultados obtenidos en los examenes de cada materia viendo asi si aplica al ingreso 2026 </p>
+             </div>   
+			 
+			 <div class="about-text">
+			 <p>
+			 7. MATRICULA
+			 </p>
+			 
+			 <p> En este momento se le notificara para poder acercarce a nuetsra secretasria para poder comenzar con el tramite de Matricula
+			 </p>
+			 
+			</section>
+
+        <!-- Sección ¿Quienes Somos? -->
+        <section id="nosotros" class="section nosotros">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestra Historia </h2>
+                    <p class="section-subtitle"> Mi Corazon es de Dios y para Dios - Maria del Refujio </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>FUNDADORA: MADRE MARÍA DEL REFUGIO AGUILAR Y TORRES</h3>
+                        <p>
+                            Fundadora de la Congregación: Madre María del Refugio fue la visionaria y alma creadora de esta comunidad religiosa 
+							femenina dedicada a la vida apostólica y al servicio de la Iglesia. Con profundo amor y dedicación, estableció los 
+							cimientos para que las Hermanas Mercedarias pudieran vivir un carisma específico, centrado en la Eucaristía y en la 
+							misericordia mercedaria. Su iniciativa y liderazgo fueron decisivos para la consolidación de esta obra religiosa que
+							perdura hasta hoy.  
+                        </p>
+                        <p>
+                             Nacida en México, vivió una profunda vida de fe, entrega y servicio: Originaria de México, Madre María del Refugio 
+							Aguilar y Torres fue una mujer de intensa espiritualidad y compromiso cristiano. Desde muy joven manifestó una vocación
+							clara y un corazón abierto a las necesidades de los demás. Su vida estuvo marcada por una entrega total a Dios 
+							y a los hermanos, evidenciando un amor generoso hacia los pobres, los enfermos y los más vulnerables.
+                        </p>
+                     </div>
+					 </div>
+					 </div>
+					 
+					  
+					   <!-- Imagen normal con estilo -->
+                         <img src="imagen.png" alt="imagen de maria" class="styled-image">
+                  
+				 			
+                
+				 <div class="about-grid">
+				 <div class="about-text">
+				    <h4 class="section-title">Nuestra Congregacion</h4>
+				
+				  <p>
+				   La Congregación de Hermanas Mercedarias del Santísimo Sacramento es un instituto religioso femenino de vida apostólica,
+				 fundado con el propósito de dar gloria a Dios a través del servicio generoso, la entrega total y la vivencia radical del Evangelio.
+				 </p>
+				
+				 <p>Las hermanas, unidas por los vínculos sagrados de los votos públicos simples y perpetuos —pobreza, castidad y obediencia—, consagran su vida 
+				 entera al seguimiento de Cristo, presente de manera real y viva en la Eucaristía, centro y fuente de su espiritualidad.
+				 </p>
+				
+                 <p>Viven en comunidades fraternas donde se comparte no solo el espacio físico, sino también los bienes materiales, la misión apostólica y, 
+                  sobre todo, una profunda vida espiritual basada en la oración, la adoración al Santísimo Sacramento y el amor al prójimo. Su forma de vida 
+			      está profundamente inspirada en el carisma eucarístico mercedario, que les impulsa a contemplar, celebrar y anunciar el misterio de la redención realizada por Cristo,
+			      especialmente en la Eucaristía, y a trabajar con celo por la liberación integral de las personas, especialmente de los más necesitados.
+                 Animadas por el espíritu de la Merced y movidas por la caridad eucarística, las Hermanas se comprometen en diversas obras apostólicas,
+			      especialmente en el campo de la educación, la pastoral y el servicio social, buscando siempre responder con fidelidad a los signos de los tiempos y a las necesidades de la Iglesia y del mundo.
+			      </p>
+			    </div>        
+                </div>
+			 
+			 <div class="carousel">
+               <div class="slides"> 
+			   <div class="carousel-images" id="carousel">
+               <img src="imagen1maria.png" alt="imagen 1">
+               <img src="imagen2.png" alt="Imagen 2">
+               <img src="imagen3.png" alt="Imagen 3">
+               </div>
+              </div>
+			 </div>
+			
+			
+
+        </section>
+
+        <!-- Sección horarios -->
+        <section id="servicios" class="section servicios">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Horarios y Ubicacion</h2>
+                    <p class="section-subtitle">
+                        Nuestros Horarios para poder brindar una mejor atencion
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3> Horarios</h3>
+                        <p>Te puedes hacercar a nuestra recepcion en los sigueintes horarios:</p>
+                        <ul class="service-features">
+                            <li> De Lunes a Viernes de:
+							7:30AM a 3:30PM </li>                               
+							<li> sabados y dommigos cerrado </li>
+                        </ul>
+						<h4>Tambien puedes contactarnos</h4>
+						<p> Al numero WhatsApp : 7883-5145 </p>						
+                     </div>
+                     <div class="service-card">
+                        <h3>¿Donde estamos ubicados?</h3>
+                        <p>Te demostramos donde estamos ubicados detalladamente:</p>    						
+                                     
+                            
+			<!-- ===== Mapa de ubicación ===== -->
+<section class="ubicacion">
+  <div class="mapa-contenedor">
+    <iframe
+      src="https://www.google.com/maps?q=13.7391089,-89.0524668&z=15&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Mapa de ubicación"
+    ></iframe>
+  </div>
+  </div>
+  </div>
+  </div>
+</section>
+        </section>
+		
+
+        <!-- Sección Vestuario Institucional -->
+        <section id="equipo" class="section equipo">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Uniformes</h2>
+                    <p class="section-subtitle">
+                        Diseño de uniformes de forma detallada para representar la institucion 
+                    </p>
+                </div>
+<!-- 🔹 Sección de Tarjetas Expansibles -->
+<section class="tarjetas-section">
+  <div class="contenedor-tarjetas">
+   <div class="tarjeta">
+  <h3>Uniforme Diario</h3>
+  <p><strong>PARA LAS NIÑAS:</strong></p>
+  <p>
+    Una camisa manga corta, por encima un jumper con la insignia de nuestra institución en la parte superior. 
+    Por abajo, una falda cuadriculada con un pliegue al frente, calcetas blancas y zapatos negros.
+  </p>
+  <p><strong>PARA LOS NIÑOS:</strong></p>
+  <p>
+    Una camisa color blanca tipo polo con franjas color vino a los costados, acompañada de nuestra insignia.
+    Además, un pantalón negro de vestir y zapatos de vestir color negro.
+  </p>
+</div>
+
+<div class="tarjeta">
+  <h3>Uniforme Deportivo</h3>
+  <p>
+    Este uniforme está conformado por una camisa blanca con franjas color vino en los costados y nuestra insignia.
+    En la parte inferior, un pantalón deportivo color vino y zapatos color blanco.
+  </p>
+</div>
+
+<div class="tarjeta">
+  <h3>Diplomado en Salud</h3>
+  <p>
+    Este uniforme consiste en una camisa y pantalón de color azul oscuro, acompañados de zapatos blancos.
+  </p>
+</div>
+
+<div class="tarjeta">
+  <h3>Diplomado en Hostelería y Turismo en Inglés</h3>
+  <p>
+    Consta de un traje tipo filipina de color negro con detalles color vino y la insignia institucional.
+    En la parte inferior, un pantalón de color negro, calcetines negros y zapatos de vestir.
+  </p>
+</div>
+
+<div class="tarjeta">
+  <h3>Diplomado en Informática y Diseño Gráfico</h3>
+  <p>
+    En este diplomado aún se utiliza el uniforme de diario, con la expectativa de que para el año 2026 
+    se pueda crear y adoptar un uniforme representativo propio.
+  </p>
+</div>
+
+<div class="tarjeta">
+  <h3>Pastoral Juvenil de Eucarísticos Mercedarios (PJEM) y Niños Eucarísticos Mercedarios (NEM)</h3>
+  <p>
+    Este es una camisa con diseño representativo de Maria de la Merced por la parte de abajo el pans institucional.
+  </p>
+</div>
+
+  </div>
+  </div>
+</section>
+           
+        <!-- Sección Eventos y actividades -->
+        <section id="noticias" class="section noticias">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Actividades y Eventos</h2>
+                    <p class="section-subtitle">
+                        acontinuacion presentamos las actividades y eventos que se relaizan en el transurso del año escolar 
+						
+                    </p>
+                </div>
+
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Atividades Academicas</h3>
+                             <ul class="service-features">
+                            <li> Feria cientfica </li>   
+                             <li> Dia Eucaristico</li>
+                             <li>Concurso de oratoria</li>	
+                              <li> Proyectos de Investigacion</li>							 
+							 </ul>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Atividades Religiosas </h3>
+                             <ul class="service-features">
+                            <li> Corpus christi  </li>   
+                             <li> Flor de Mayo </li> 
+							 <li> Dia de las cruz </li>
+							 <li>Novenas a La Virgen</li>
+							 <li> Via Cruzis </li>
+							 <li>misas semanales</li>
+							 <li>Horeas de oracion</li>
+							 <li>Camintas de Peregrinacion</li>
+							 <li>realizacion de alfonbras de sal durante Semana Santa</li>
+							 
+							 </ul>
+                        </div>
+                    </article>
+                     <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Atividades Deportivas</h3>
+                             <ul class="service-features">
+                            <li> Intramuros </li>   
+                             <li> Intercolegiales </li>
+                             <li> Encuentros institucionales</li>	
+                              <li> Juegos relampago con instituciones amigas</li>							 
+							 </ul>
+                        </div>
+                    </article>
+                     <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Culturales</h3>
+                             <ul class="service-features">
+                            <li>Festival Gastronomico</li>   
+                             <li>Grupos de baile</li>
+                             <li>Banda musical</li>	
+                              <li> musical representativo</li>							 
+							 </ul>
+                        </div>
+                    </article>
+                     <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Atividades civicas</h3>
+                             <ul class="service-features">
+                            <li>  Actos civicos Semanales</li>
+                             <li> Presentaciones de paises hermanos </li>
+                             <li> Desfile representativo 15 de Septiembre </li>
+                              </ul>
+                        </div>
+                    </article>
+                    <article class="news-card">
+                        <div class="news-image">🚀</div>
+                        <div class="news-content">
+                            <div class="news-meta">                         
+                            </div>
+                            <h3 class="news-title">Visitas de campo</h3>
+                             <ul class="service-features">
+                            <li>  Viaje de Excurcion </li>
+                             <li> Caminatas dirigidas por (PJEM) </li>
+                             <li> viajes espirituales ( Retiros Espirituales) </li>
+                              </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Pastoral vocacional -->
+<section class="contenedor">
+    <h1 class="titulo-principal">Pastorales Vocacionales</h1>
+    <p class="subtitulo">
+        Comunidad formativa y espiritual que promueve valores cristianos, compromiso social y servicio 
+        en la vida estudiantil de los Eucarísticos Mercedarios.
+    </p>
+
+    <div class="tarjetas">
+        <div class="tarjeta">
+            <h3>Pastoral Juvenil Eucaristicos Mercedarios (PJEM) y  Niños Eucaristicos Mercedarios (NEM)</h3>
+            <p>
+                Es un grupo de jóvenes y niños donde se les comparte la fe eucarística a través de actividades recreativas llevando de la mano la palabra de Dios.
+            </p>
+        </div>
+    </div>
+</section>
+
+						
+						<!-- Sección Contacto -->
+        <section id="contacto" class="section contacto">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contáctanos</h2>
+                    <p class="section-subtitle">
+                        ¿Listo para transformar tu empresa? Hablemos sobre tu próximo proyecto
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-details">
+                                <h4>Oficina Principal</h4>
+                                <p>
+                                    Av. Tecnológica 123, Torre Empresarial<br>
+                                    Piso 25, Madrid, España 28001
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-details">
+                                <h4>Teléfonos</h4>
+                                <p>
+                                    Principal: +34 91 123 45 67<br>
+                                    Soporte: +34 91 123 45 68
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>
+                                    General: info@techcorp.com<br>
+                                    Ventas: ventas@techcorp.com
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-details">
+                                <h4>Horario de Atención</h4>
+                                <p>
+                                    Lunes - Viernes: 9:00 - 18:00<br>
+                                    Sábados: 9:00 - 14:00
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="empresa">Empresa</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="servicio">Servicio de Interés</label>
+                            <select id="servicio" name="servicio">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="desarrollo">Desarrollo de Software</option>
+                                <option value="cloud">Soluciones Cloud</option>
+                                <option value="ia">Inteligencia Artificial</option>
+                                <option value="seguridad">Ciberseguridad</option>
+                                <option value="bi">Business Intelligence</option>
+                                <option value="consultoria">Consultoría Digital</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+	
+	
+    <script>
+        // Sistema de navegación por pestañas
+        document.addEventListener('DOMContentLoaded', function() {
+            const navTabs = document.querySelectorAll('.nav-tab');
+            const sections = document.querySelectorAll('.section');
+
+            // Función para cambiar de sección
+            function showSection(targetSection) {
+                // Ocultar todas las secciones
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Remover clase active de todas las pestañas
+                navTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // Mostrar la sección objetivo
+                const targetElement = document.getElementById(targetSection);
+                if (targetElement) {
+                    targetElement.classList.add('active');
+                }
+
+                // Activar la pestaña correspondiente
+                const activeTab = document.querySelector(`[data-section="${targetSection}"]`);
+                if (activeTab) {
+                    activeTab.classList.add('active');
+                }
+
+                // Scroll suave al inicio de la sección
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }
+
+            // Event listeners para las pestañas
+            navTabs.forEach(tab => {
+                tab.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
+                    showSection(targetSection);
+                });
+            });
+
+            // Animaciones para elementos cuando se muestran
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observar elementos para animaciones
+            document.querySelectorAll('.stat-card, .service-card, .team-card, .news-card, .value-card').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Contador animado para estadísticas
+            function animateCounters() {
+                const counters = document.querySelectorAll('.stat-number');
+                
+                counters.forEach(counter => {
+                    const target = parseInt(counter.textContent.replace('+', ''));
+                    const increment = target / 100;
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            counter.textContent = target + '+';
+                            clearInterval(timer);
+                        } else {
+                            counter.textContent = Math.floor(current) + '+';
+                        }
+                    }, 20);
+                });
+            }
+
+            // Activar contador cuando la sección inicio sea visible
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.target.classList.contains('active')) {
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            });
+
+            const inicioSection = document.querySelector('#inicio');
+            if (inicioSection) {
+                statsObserver.observe(inicioSection);
+            }
+
+            // Formulario de contacto
+            document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obtener datos del formulario
+                const formData = new FormData(this);
+                const nombre = formData.get('nombre');
+                const email = formData.get('email');
+                const empresa = formData.get('empresa');
+                const servicio = formData.get('servicio');
+                const mensaje = formData.get('mensaje');
+                
+                // Validación básica
+                if (!nombre || !email || !mensaje) {
+                    alert('Por favor, completa todos los campos obligatorios.');
+                    return;
+                }
+                
+                // Simular envío exitoso
+                alert(`¡Gracias ${nombre}! Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.`);
+                
+                // Limpiar formulario
+                this.reset();
+            });
+
+            // Efecto hover para las tarjetas de servicios
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+            });
+
+            // Enlaces "Leer más" en noticias
+            document.querySelectorAll('.read-more').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('En una implementación real, esto abriría el artículo completo.');
+                });
+            });
+        });
+	
+	<!-- 🔹 Sección de Tarjetas Expansibles -->
+  const tarjetas = document.querySelectorAll(".tarjeta");
+  tarjetas.forEach((tarjeta) => {
+    tarjeta.addEventListener("click", () => {
+      tarjetas.forEach((t) => t.classList.remove("expanded"));
+      tarjeta.classList.toggle("expanded");
+    });
+  });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97d17f33145067c9',t:'MTc1NzUzNDI3Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
