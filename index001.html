@@ -643,9 +643,7 @@
     }
 }
         
-
-	
-		      /* contacto */
+/* contacto */
               .contacto {
             background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
@@ -718,18 +716,18 @@
             font-weight: 500;
         }
 
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 1rem;
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 10px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
+       .form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: black; /* Cambiado de white a black */
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
 
         .form-group input::placeholder,
         .form-group textarea::placeholder {
@@ -814,36 +812,7 @@
             }
         }
 		
-		.carousel {
-  width: 80%;
-  max-width: 600px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  margin: 20px 0 20px auto; /* empuja hacia la derecha */
-}
-
-.slides {
-  display: flex;
-  width: 300%; /* porque hay 3 imágenes */
-  animation: slide 12s infinite;
-}
-
-.slides img {
-  width: 100%;
-  border-radius: 15px;
-}
-
-@keyframes slide {
-  0%   { transform: translateX(0%); }
-  25%  { transform: translateX(0%); }
-  35%  { transform: translateX(-100%); }
-  60%  { transform: translateX(-100%); }
-  70%  { transform: translateX(-200%); }
-  95%  { transform: translateX(-200%); }
-  100% { transform: translateX(0%); }
-}
+		
 /* Sección principal */
 .section.Oferta.Academica {
   background: linear-gradient(to right, #f0f4ff, #e6ecfa);
@@ -1065,6 +1034,35 @@
 .media.active { opacity:1; transform: scale(1); filter: blur(0px);}
 .content { text-align:center; color:white; padding:50px; position:relative; z-index:1;
 }
+/* Nuevo CSS para un Carrusel Moderno y Limpio */
+
+/* Contenedor principal del carrusel */
+.carousel {
+  width: 90%;
+  max-width: 750px; 
+  margin: 40px auto; /* Centrado y con margen */
+  overflow: hidden; /* Oculta las imágenes que no están visibles */
+  border-radius: 12px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  background-color: #f0f0f0; 
+}
+
+/* Contenedor de las imágenes que se moverá */
+.carousel-images {
+  display: flex;
+  /* La clave para la transición: */
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+/* Cada imagen dentro del carrusel */
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0; /* IMPORANTE: Evita que las imágenes se encojan */
+  height: 400px; 
+  object-fit: cover; 
+  border-radius: 0; /* Quitamos el borde para que se vea uniforme dentro del contenedor */
+}
     </style>
 </head>
 <body>
@@ -1260,10 +1258,10 @@ document.getElementById("screensaver").addEventListener("click", e=>{
 		   <p> 4. FECHA DE EXÁMENES DE ADMISIÓN </p>
 
              <p> Para Educación Parvularia y Primer grado 
-              Jueves 21  de agosto
+              Jueves 30 de octubre 
 
           Para Educación Básica (2° a 9° grado) y Bachillerato
-          Viernes 22 de agosto
+          Viernes 30 de Octubre
 		   </p>
 		   </div>
 		   
@@ -1325,13 +1323,8 @@ document.getElementById("screensaver").addEventListener("click", e=>{
 					 </div>
 					 </div>
 					 
-					  
-					   <!-- Imagen normal con estilo -->
-                         <img src="madres.jpg" alt="Foto de maria" width="600">
-
-                  
-				 			
-                
+					
+              
 				 <div class="about-grid">
 				 <div class="about-text">
 				    <h4 class="section-title">Nuestra Congregacion</h4>
@@ -1356,12 +1349,14 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                 </div>
 			 
 			 <div class="carousel">
-               <div class="slides"> 
-			   <div class="carousel-images" id="carousel">
-               <img src="imagen1maria.png" alt="imagen 1">
-               <img src="imagen2.png" alt="Imagen 2">
-               <img src="imagen3.png" alt="Imagen 3">
-               </div>
+  <div class="carousel-images" id="carousel-slides">
+    <img src="madres.jpg" alt="imagen 1">
+    <img src="maria refujio.jpg" alt="Imagen 2">
+    <img src="refujio.jpg" alt="Imagen 3">
+  </div>
+</div>
+  </div>
+</div>
               </div>
 			 </div>
 			
@@ -1624,8 +1619,8 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                             <div class="contact-details">
                                 <h4>Oficina Principal</h4>
                                 <p>
-                                    Av. Tecnológica 123, Torre Empresarial<br>
-                                    Piso 25, Madrid, España 28001
+                                    Final Calle Miguel Román Peña<br>
+                                    en San Martín, El Salvador
                                 </p>
                             </div>
                         </div>
@@ -1635,8 +1630,8 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                             <div class="contact-details">
                                 <h4>Teléfonos</h4>
                                 <p>
-                                    Principal: +34 91 123 45 67<br>
-                                    Soporte: +34 91 123 45 68
+                                    WhatsApp: +503 7883-5145<br>
+                                    celular fijo: +503 2258 4675
                                 </p>
                             </div>
                         </div>
@@ -1646,8 +1641,8 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                             <div class="contact-details">
                                 <h4>Email</h4>
                                 <p>
-                                    General: info@techcorp.com<br>
-                                    Ventas: ventas@techcorp.com
+                                    General: info@colegioeucaristicomercedario.edu.sv<br>
+                                    Admisones: nuevoingreso2026@colegioeucaristicomercedario.edu.sv
                                 </p>
                             </div>
                         </div>
@@ -1657,8 +1652,8 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                             <div class="contact-details">
                                 <h4>Horario de Atención</h4>
                                 <p>
-                                    Lunes - Viernes: 9:00 - 18:00<br>
-                                    Sábados: 9:00 - 14:00
+                                    Lunes - Viernes: 7:30 - 3:30 <br>
+                                    Lunes - Viernes: 7:30 - 3:30 
                                 </p>
                             </div>
                         </div>
@@ -1677,25 +1672,25 @@ document.getElementById("screensaver").addEventListener("click", e=>{
                         
                         <div class="form-group">
                             <label for="empresa">Empresa</label>
-                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+                            <input type="text" id="empresa" name="empresa" placeholder="Nombre de Padre/Madre">
                         </div>
                         
                         <div class="form-group">
-                            <label for="servicio">Servicio de Interés</label>
+                            <label for="servicio">seccion de interes</label>
                             <select id="servicio" name="servicio">
-                                <option value="">Selecciona un servicio</option>
-                                <option value="desarrollo">Desarrollo de Software</option>
-                                <option value="cloud">Soluciones Cloud</option>
-                                <option value="ia">Inteligencia Artificial</option>
-                                <option value="seguridad">Ciberseguridad</option>
-                                <option value="bi">Business Intelligence</option>
-                                <option value="consultoria">Consultoría Digital</option>
+                                <option value="">parvularia</option>
+                                <option value="desarrollo">primer ciclo </option>
+                                <option value="cloud">segundo siclo</option>
+                                <option value="ia">tercer ciclo</option>
+                                <option value="seguridad">bachillerato Diplomado en Salud</option>
+                                <option value="bi">Bachillerato Diplomado en Hosteleria y Turismo en Ingles</option>
+                                <option value="consultoria">Bachillerato Diplomado en Infomratica Disño Grafico </option>
                             </select>
                         </div>
                         
                         <div class="form-group">
                             <label for="mensaje">Mensaje *</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuentanos cuales son tus expectativas para nuestro colegio en 2026..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn">Enviar Mensaje</button>
